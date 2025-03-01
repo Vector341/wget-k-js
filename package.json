@@ -1,0 +1,27 @@
+{
+  "name": "wget-k",
+  "version": "1.0.0",
+  "description": "Convert relative links in HTML to absolute URL. Like `wget --convert-links`",
+  "main": "index.js",
+  "type": "module",
+  "module": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "html",
+    "parse",
+    "wget"
+  ],
+  "author": "vector341",
+  "license": "MIT",
+  "dependencies": {
+    "html-resouce-replacer": "html-resource-replacer@^1.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.2"
+  }
+}
