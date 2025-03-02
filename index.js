@@ -34,7 +34,7 @@ const process = sourcesPlugin({
   replacements,
 });
 
-function getImportedHtml(html, imports) {
+function getImportedHtml(reservedStr, imports) {
   if (imports.length === 0) {
     return "";
   }
@@ -45,10 +45,10 @@ function getImportedHtml(html, imports) {
     // console.log("request", request.toString(), "\tbaseUrl: ", baseUrl);
     const url = new URL(request, baseUrl);
 
-    html = html.replace(new RegExp(importName, "g"), url);
+    reservedStr = reservedStr.replace(new RegExp(importName, "g"), url);
   }
 
-  return html;
+  return reservedStr;
 }
 
 function getHtmlRaw(html, replacements) {
